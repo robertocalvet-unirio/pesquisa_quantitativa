@@ -1,0 +1,590 @@
+{
+  "anos_completos": [
+    "2023",
+    "2024",
+    "2025"
+  ],
+  "ano_parcial": "2026",
+  "eventos_unicos": 8900,
+  "eventos_por_ano": {
+    "2023": 3318,
+    "2024": 2359,
+    "2025": 3223
+  },
+  "por_ano": {
+    "2023": {
+      "n_alvo": 973,
+      "n_com_org": 854,
+      "cobertura": 87.8,
+      "n_nos": 2477,
+      "n_arestas": 6458,
+      "densidade": 0.0021,
+      "n_componentes": 391,
+      "n_gigante": 1229,
+      "pct_gigante": 49.6,
+      "n_multiorg": 705,
+      "pct_multiorg": 72.5,
+      "n_multissetor": 464,
+      "pct_multissetor": 47.7,
+      "comp": {
+        "Estado": 953,
+        "Mercado": 171,
+        "Terceiro setor": 1055,
+        "Indefinido": 298
+      },
+      "pct_indef": 12.0,
+      "recorrencia": {
+        "1": 6226,
+        "2": 188,
+        "3": 39,
+        "4": 4,
+        "5": 1
+      },
+      "pct_diades_pontuais": 96.4,
+      "C_grau": 7.7,
+      "C_interm": 32.3,
+      "top_intermediacao": [
+        [
+          "Ministério da Saúde",
+          0.32597
+        ],
+        [
+          "Ministério da Fazenda",
+          0.15667
+        ],
+        [
+          "Ministério Público Federal",
+          0.15176
+        ],
+        [
+          "Tribunal de Contas da União (TCU)",
+          0.11895
+        ],
+        [
+          "Ministério da Agricultura e Pecuária - MAPA",
+          0.11568
+        ],
+        [
+          "Ministério do Trabalho e Emprego",
+          0.11169
+        ],
+        [
+          "Associação dos Delegados de Polícia do Brasil - ADEPOL do Brasil",
+          0.09194
+        ],
+        [
+          "Ministério do Meio Ambiente e Mudança do Clima",
+          0.08729
+        ],
+        [
+          "Ministério do Desenvolvimento, Indústria, Comércio e Serviços - MDIC",
+          0.08021
+        ],
+        [
+          "Ministério da Justiça e Segurança Pública",
+          0.06467
+        ]
+      ],
+      "perm_new": {
+        "obs": 69.15,
+        "mu": 80.81,
+        "sd": 1.33,
+        "z": -8.76,
+        "p": 0.001,
+        "nelig": 671
+      },
+      "perm_old": {
+        "obs": 71.58,
+        "mu": 80.89,
+        "sd": 1.34,
+        "z": -6.97,
+        "p": 0.001,
+        "nelig": 672
+      }
+    },
+    "2024": {
+      "n_alvo": 699,
+      "n_com_org": 640,
+      "cobertura": 91.6,
+      "n_nos": 2292,
+      "n_arestas": 8211,
+      "densidade": 0.0031,
+      "n_componentes": 298,
+      "n_gigante": 1268,
+      "pct_gigante": 55.3,
+      "n_multiorg": 555,
+      "pct_multiorg": 79.4,
+      "n_multissetor": 387,
+      "pct_multissetor": 55.4,
+      "comp": {
+        "Estado": 818,
+        "Mercado": 155,
+        "Terceiro setor": 1025,
+        "Indefinido": 294
+      },
+      "pct_indef": 12.8,
+      "recorrencia": {
+        "1": 8026,
+        "2": 165,
+        "3": 18,
+        "4": 1,
+        "6": 1
+      },
+      "pct_diades_pontuais": 97.7,
+      "C_grau": 8.4,
+      "C_interm": 23.6,
+      "top_intermediacao": [
+        [
+          "Ministério da Fazenda",
+          0.23842
+        ],
+        [
+          "Ministério da Educação - MEC",
+          0.16731
+        ],
+        [
+          "Câmara dos Deputados",
+          0.11863
+        ],
+        [
+          "Receita Federal do Brasil",
+          0.11516
+        ],
+        [
+          "Ministério do Trabalho e Emprego - MTE",
+          0.10243
+        ],
+        [
+          "Núcleo de Pesquisas em Tributação do Insper (confirmada)",
+          0.08743
+        ],
+        [
+          "Casa Civil",
+          0.08642
+        ],
+        [
+          "ASSOCIAÇÃO BRASILEIRA DA INDÚSTRIA DE HOTÉIS - ABIH (Confirmado)",
+          0.08349
+        ],
+        [
+          "Ministério dos Direitos Humanos e da Cidadania - MDH",
+          0.08198
+        ],
+        [
+          "Política Fiscal da Secretaria de Política Econômica do Ministério da Fazenda (confirmada)",
+          0.07878
+        ]
+      ],
+      "perm_new": {
+        "obs": 73.57,
+        "mu": 83.9,
+        "sd": 1.44,
+        "z": -7.16,
+        "p": 0.001,
+        "nelig": 526
+      },
+      "perm_old": {
+        "obs": 71.84,
+        "mu": 83.8,
+        "sd": 1.46,
+        "z": -8.22,
+        "p": 0.001,
+        "nelig": 522
+      }
+    },
+    "2025": {
+      "n_alvo": 961,
+      "n_com_org": 875,
+      "cobertura": 91.1,
+      "n_nos": 2939,
+      "n_arestas": 10194,
+      "densidade": 0.0024,
+      "n_componentes": 338,
+      "n_gigante": 1926,
+      "pct_gigante": 65.5,
+      "n_multiorg": 768,
+      "pct_multiorg": 79.9,
+      "n_multissetor": 525,
+      "pct_multissetor": 54.6,
+      "comp": {
+        "Estado": 1090,
+        "Mercado": 195,
+        "Terceiro setor": 1282,
+        "Indefinido": 372
+      },
+      "pct_indef": 12.7,
+      "recorrencia": {
+        "1": 9917,
+        "2": 224,
+        "3": 33,
+        "4": 11,
+        "5": 6,
+        "7": 3
+      },
+      "pct_diades_pontuais": 97.3,
+      "C_grau": 5.9,
+      "C_interm": 17.3,
+      "top_intermediacao": [
+        [
+          "Ministério da Saúde",
+          0.17463
+        ],
+        [
+          "Instituto Livre Mercado",
+          0.15566
+        ],
+        [
+          "Ministério do Trabalho e Emprego (MTE)",
+          0.11732
+        ],
+        [
+          "Ministério da Educação",
+          0.08143
+        ],
+        [
+          "Ministério da Justiça e Segurança Pública",
+          0.07975
+        ],
+        [
+          "Ministério dos Direitos Humanos e da Cidadania",
+          0.07768
+        ],
+        [
+          "Câmara dos Deputados",
+          0.07429
+        ],
+        [
+          "Confederação da Agricultura e Pecuária do Brasil (CNA)",
+          0.06645
+        ],
+        [
+          "Ministério da Agricultura e Pecuária(MAPA)",
+          0.0657
+        ],
+        [
+          "Confederação Nacional dos Trabalhadores em Educação",
+          0.06392
+        ]
+      ],
+      "perm_new": {
+        "obs": 73.02,
+        "mu": 85.48,
+        "sd": 1.18,
+        "z": -10.55,
+        "p": 0.001,
+        "nelig": 719
+      },
+      "perm_old": {
+        "obs": 74.66,
+        "mu": 83.92,
+        "sd": 1.21,
+        "z": -7.68,
+        "p": 0.001,
+        "nelig": 734
+      },
+      "robustez_ruido": {
+        "trials": 400,
+        "seed": 123,
+        "limiar_significancia_5pct_pct": 55,
+        "niveis": [
+          {
+            "ruido_pct": 5,
+            "z_medio": -9.44,
+            "significativo_5pct": true
+          },
+          {
+            "ruido_pct": 10,
+            "z_medio": -8.34,
+            "significativo_5pct": true
+          },
+          {
+            "ruido_pct": 20,
+            "z_medio": -6.4,
+            "significativo_5pct": true
+          },
+          {
+            "ruido_pct": 30,
+            "z_medio": -4.87,
+            "significativo_5pct": true
+          },
+          {
+            "ruido_pct": 40,
+            "z_medio": -3.62,
+            "significativo_5pct": true
+          },
+          {
+            "ruido_pct": 50,
+            "z_medio": -2.58,
+            "significativo_5pct": true
+          },
+          {
+            "ruido_pct": 55,
+            "z_medio": -2.11,
+            "significativo_5pct": true
+          },
+          {
+            "ruido_pct": 60,
+            "z_medio": -1.71,
+            "significativo_5pct": false
+          },
+          {
+            "ruido_pct": 70,
+            "z_medio": -1.09,
+            "significativo_5pct": false
+          },
+          {
+            "ruido_pct": 80,
+            "z_medio": -0.71,
+            "significativo_5pct": false
+          },
+          {
+            "ruido_pct": 90,
+            "z_medio": -0.42,
+            "significativo_5pct": false
+          },
+          {
+            "ruido_pct": 100,
+            "z_medio": -0.24,
+            "significativo_5pct": false
+          }
+        ]
+      }
+    }
+  },
+  "retencao": {
+    "diadica": [
+      {
+        "n_t": 6458,
+        "n_t1": 8211,
+        "intersecao": 88,
+        "jaccard": 0.006,
+        "retencao_de_t": 1.4,
+        "nao_retencao_de_t": 98.6,
+        "par": "2023-2024"
+      },
+      {
+        "n_t": 8211,
+        "n_t1": 10194,
+        "intersecao": 137,
+        "jaccard": 0.0075,
+        "retencao_de_t": 1.7,
+        "nao_retencao_de_t": 98.3,
+        "par": "2024-2025"
+      }
+    ],
+    "organizacoes": [
+      {
+        "n_t": 2477,
+        "n_t1": 2292,
+        "intersecao": 282,
+        "jaccard": 0.0628,
+        "retencao_de_t": 11.4,
+        "nao_retencao_de_t": 88.6,
+        "par": "2023-2024"
+      },
+      {
+        "n_t": 2292,
+        "n_t1": 2939,
+        "intersecao": 308,
+        "jaccard": 0.0626,
+        "retencao_de_t": 13.4,
+        "nao_retencao_de_t": 86.6,
+        "par": "2024-2025"
+      }
+    ]
+  },
+  "persistencia": {
+    "por_n_anos": {
+      "1": 6396,
+      "2": 410,
+      "3": 164
+    },
+    "total_orgs_distintas": 6970,
+    "n_presentes_3anos": 164,
+    "presentes_3anos": [
+      "1) Ministério da Fazenda - MFAZ",
+      "Acesso à Justiça do Ministério da Justiça e Segurança Pública",
+      "Agência Brasileira de Desenvolvimento Industrial - ABDI",
+      "Agência Nacional de Aviação Civil - ANAC",
+      "Agência Nacional de Energia Elétrica - ANEEL",
+      "Agência Nacional de Mineração (ANM)",
+      "Agência Nacional de Telecomunicações (Anatel)",
+      "Agência Nacional de Telecomunicações - ANATEL",
+      "Agência Nacional de Telecomunicações - Anatel",
+      "Agência Nacional de Transportes Aquaviários - ANTAQ",
+      "Agência Nacional de Transportes Terrestres - ANTT",
+      "Agência Nacional de Vigilância Sanitária (Anvisa)",
+      "Agência Nacional de Vigilância Sanitária - ANVISA",
+      "Agência Nacional do Petróleo, Gás Natural e Biocombustíveis",
+      "Arrecadação e Fiscalização de Receitas da Agência Nacional de Mineração (ANM)",
+      "Associação Brasileira da Indústria Química - ABIQUIM",
+      "Associação Brasileira das Empresas Aéreas",
+      "Associação Brasileira das Indústrias de Óleos Vegetais - ABIOVE",
+      "Associação Brasileira de Distribuidores de Energia Elétrica - ABRADEE",
+      "Associação Brasileira de Energia Eólica - ABEEólica",
+      "Associação Brasileira de Energia Solar Fotovoltaica - ABSOLAR",
+      "Associação Brasileira de Mobilidade e Tecnologia - AMOBITEC",
+      "Associação Brasileira de Planos de Saúde - Abramge",
+      "Associação Brasileira de Psiquiatria - ABP",
+      "Associação Brasileira do Biogás - ABIOGÁS",
+      "Associação Brasileira para o Estudo da Obesidade e Síndrome Metabólica-ABESO",
+      "Associação Médica Brasileira - AMB",
+      "Associação Nacional das Etnias Ciganas",
+      "Associação Nacional das Universidades Particulares",
+      "Associação Nacional de Pós-Graduandos - ANPG",
+      "Associação Nacional dos Auditores Fiscais da Receita Federal do Brasil - ANFIP",
+      "Associação Nacional dos Dirigentes das Instituições Federais de Ensino Superior (ANDIFES)",
+      "Associação Nacional dos Magistrados da Justiça do Trabalho - Anamatra",
+      "Associação Nacional dos Membros do Ministério Público - CONAMP",
+      "Associação dos Delegados de Polícia do Brasil - ADEPOL do Brasil",
+      "Associação dos Policiais Penais do Brasil - AGEPPEN-BRASIL",
+      "Banco Central do Brasil",
+      "COMITÊ OLÍMPICO DO BRASIL - COB",
+      "CONFEDERAÇÃO NACIONAL DE MUNICÍPIOS - CNM",
+      "Casa Civil",
+      "Casa Civil da Presidência da República",
+      "Confederação Nacional da Indústria (CNI)",
+      "Confederação Nacional de Municípios - CNM - Reqs",
+      "Confederação Nacional do Comércio - CNC",
+      "Confederação Nacional do Comércio de Bens, Serviços e Turismo (CNC)",
+      "Confederação Nacional do Transporte (CNT)",
+      "Confederação Nacional dos Municípios (CNM)",
+      "Confederação Nacional dos Trabalhadores em Educação - CNTE",
+      "Confederação Nacional dos Transportadores Autônomos - CNTA",
+      "Confederação da Agricultura e Pecuária do Brasil - CNA",
+      "Confederação dos Servidores Públicos do Brasil (CSPB)",
+      "Confederação dos Trabalhadores no Serviço Público Municipal",
+      "Conselho Administrativo de Defesa Econômica - CADE",
+      "Conselho Federal de Educação Física - CONFEF",
+      "Conselho Federal de Farmácia - CFF",
+      "Conselho Federal de Medicina - CFM",
+      "Conselho Federal de Psicologia (CFP)",
+      "Conselho Federal de Serviço Social (CFESS)",
+      "Conselho Nacional de Assistência Social - CNAS",
+      "Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPQ",
+      "Conselho Nacional de Direitos Humanos",
+      "Conselho Nacional de Educação - CNE",
+      "Conselho Nacional de Justiça",
+      "Conselho Nacional de Saúde",
+      "Conselho Nacional de Secretarias Municipais de Saúde - CONASEMS",
+      "Conselho Nacional de Secretários de Saúde - CONASS",
+      "Conselho Nacional do Ministério Público - CNMP",
+      "Conselho Nacional dos Direitos Humanos - CNDH",
+      "Conselho Nacional dos Direitos da Criança e do Adolescente-CONANDA",
+      "Conselho Pastoral dos Pescadores - CPP",
+      "Controladoria-Geral da União - CGU",
+      "Câmara de Educação Básica do Conselho Nacional de Educação - CNE",
+      "Câmara dos Deputados - CD",
+      "Defensoria Pública da União (MS)",
+      "Delegado de Polícia",
+      "Departamento Intersindical de Estatística e Estudos Socioeconômicos - DIEESE",
+      "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "Embrapa Agroenergia (CONFIRMADO)",
+      "Empresa Brasileira de Pesquisa Agropecuária - Embrapa",
+      "Estado da Fazenda",
+      "FEBRABAN",
+      "Federação Brasileira de Bancos - FEBRABAN (Confirmado)",
+      "Federação Médica Brasileira (FMB)",
+      "Federação Nacional das Escolas Particulares - FENEP",
+      "Federação Nacional dos Policiais Rodoviários Federais - FENAPRF",
+      "Federação Nacional dos Urbanitários - FNU",
+      "Federação Única dos Petroleiros",
+      "Frente Parlamentar da Agropecuária - FPA",
+      "Fundação Getúlio Vargas - FGV",
+      "Fórum Nacional de Prevenção e Erradicação do Trabalho Infantil-FNPETI",
+      "Informação e Saúde Digital do Ministério da Saúde (SEIDIGI)",
+      "Instituto Alana",
+      "Instituto Brasil-Palestina (IBRASPAL)",
+      "Instituto Brasileiro de Geografia e Estatística-IBGE",
+      "Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (IBAMA)",
+      "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "Instituto Lado a Lado pela Vida",
+      "Instituto Livre Mercado",
+      "Instituto Nacional de Eficiência Energética - INEE",
+      "Instituto Oncoguia",
+      "Instituto para Desenvolvimento do Varejo - IDV (Confirmado)",
+      "MINISTÉRIO DA CULTURA",
+      "Ministério Público",
+      "Ministério Público Federal",
+      "Ministério Público do Estado de São Paulo",
+      "Ministério Público do Estado do Rio de Janeiro",
+      "Ministério Público do Trabalho - MPT",
+      "Ministério da Agricultura e Pecuária - MAPA",
+      "Ministério da Ciência, Tecnologia e Inovação",
+      "Ministério da Fazenda",
+      "Ministério da Gestão e Inovação em Serviços Públicos - MGISP",
+      "Ministério da Gestão e da Inovação em Serviços Públicos",
+      "Ministério da Igualdade Racial",
+      "Ministério da Justiça",
+      "Ministério da Justiça e Segurança Pública",
+      "Ministério da Pesca e Aquicultura",
+      "Ministério da Previdência Social",
+      "Ministério da Saúde",
+      "Ministério da educação",
+      "Ministério das Cidades",
+      "Ministério das Comunicações",
+      "Ministério das Mulheres",
+      "Ministério das Relações Exteriores",
+      "Ministério de Desenvolvimento, Indústria, Comércio e Serviços - MDIC",
+      "Ministério de Minas e Energia",
+      "Ministério de Portos e Aeroportos",
+      "Ministério do Desenvolvimento Agrário e Agricultura Familiar",
+      "Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome",
+      "Ministério do Desenvolvimento, Indústria, Comércio e Serviços - MDIC",
+      "Ministério do Meio Ambiente e Mudança do Clima",
+      "Ministério do Planejamento e Orçamento - MPO",
+      "Ministério do Trabalho e Emprego",
+      "Ministério do Turismo",
+      "Ministério dos Direitos Humanos e Cidadania",
+      "Ministério dos Direitos Humanos e da Cidadania",
+      "Ministério dos Povos Indígenas (MPI)",
+      "Movimento Orgulho Autista Brasil",
+      "Movimento dos Atingidos por Barragens",
+      "Observatório do Clima",
+      "Ordem dos Advogados do Brasil",
+      "Polícia Federal",
+      "Polícia Rodoviária Federal",
+      "Procuradora do Ministério Público do Trabalho - MPT",
+      "Pública Central do Servidor",
+      "Receita Federal do Brasil",
+      "Regulação da Associação Brasileira de Distribuidores de Energia Elétrica - ABRADEE",
+      "SAÚDE DA PESSOA COM DEFICIÊNCIA DO MINISTÉRIO DA SAÚDE",
+      "Secretaria Especial da Receita Federal do Brasil - RFB",
+      "Secretaria Geral da Presidência da República",
+      "Secretaria-Geral da Presidência da República",
+      "Senado Federal",
+      "Senador da República",
+      "Sindicato Nacional dos Docentes das Instituições de Ensino Superior (ANDES)",
+      "Sindicato dos Especialistas de Educação do Ensino Público Municipal de São Paulo (Sinesp)",
+      "Sociedade Brasileira de Geriatria e Gerontologia",
+      "Sociedade Brasileira de Oncologia Clínica",
+      "Sociedade Brasileira de Pneumologia e Tisiologia",
+      "Sociedade Brasileira para o Progresso da Ciência (SBPC)",
+      "Superior Tribunal de Justiça",
+      "Supremo Tribunal Federal",
+      "Tribunal Superior Eleitoral",
+      "Tribunal Superior do Trabalho -TST",
+      "Tribunal de Contas da União (TCU)",
+      "Universidade de São Paulo - USP"
+    ],
+    "brokers_persistentes": [
+      {
+        "organizacao": "Ministério da Justiça e Segurança Pública",
+        "anos_no_top15": 2
+      },
+      {
+        "organizacao": "Ministério da Saúde",
+        "anos_no_top15": 2
+      },
+      {
+        "organizacao": "Ministério da Fazenda",
+        "anos_no_top15": 2
+      },
+      {
+        "organizacao": "Câmara dos Deputados",
+        "anos_no_top15": 2
+      }
+    ]
+  },
+  "crosswalk_aplicado": {}
+}
