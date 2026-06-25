@@ -1,0 +1,71 @@
+{
+  "2023": {
+    "com_organizacao": {
+      "n": 854,
+      "media": 3.71,
+      "desvio": 2.39,
+      "mediana": 3.0,
+      "minimo": 1,
+      "maximo": 16,
+      "q1": 2.0,
+      "q3": 5.0
+    },
+    "todos_os_eventos": {
+      "n": 973,
+      "media": 3.26,
+      "desvio": 2.55,
+      "mediana": 3.0,
+      "minimo": 0,
+      "maximo": 16,
+      "q1": 1.0,
+      "q3": 5.0
+    },
+    "n_alvo": 973
+  },
+  "2024": {
+    "com_organizacao": {
+      "n": 640,
+      "media": 4.46,
+      "desvio": 3.3,
+      "mediana": 4.0,
+      "minimo": 1,
+      "maximo": 33,
+      "q1": 2.0,
+      "q3": 6.0
+    },
+    "todos_os_eventos": {
+      "n": 699,
+      "media": 4.08,
+      "desvio": 3.39,
+      "mediana": 3.0,
+      "minimo": 0,
+      "maximo": 33,
+      "q1": 2.0,
+      "q3": 6.0
+    },
+    "n_alvo": 699
+  },
+  "2025": {
+    "com_organizacao": {
+      "n": 875,
+      "media": 4.43,
+      "desvio": 2.99,
+      "mediana": 4.0,
+      "minimo": 1,
+      "maximo": 37,
+      "q1": 2.0,
+      "q3": 6.0
+    },
+    "todos_os_eventos": {
+      "n": 961,
+      "media": 4.03,
+      "desvio": 3.12,
+      "mediana": 4.0,
+      "minimo": 0,
+      "maximo": 37,
+      "q1": 2.0,
+      "q3": 6.0
+    },
+    "n_alvo": 961
+  }
+}
