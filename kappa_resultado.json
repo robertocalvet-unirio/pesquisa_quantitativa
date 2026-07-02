@@ -1,0 +1,17 @@
+{
+ "n": 150,
+ "kappa": 0.6752205292702484,
+ "ic95": [
+  0.5671689644116704,
+  0.7760265450020739
+ ],
+ "po": 0.82,
+ "pe": 0.44577777777777783,
+ "consenso_n": 123,
+ "acuracia_acertos": 100,
+ "abstencoes": 16,
+ "atrib_n": 107,
+ "atrib_acertos": 100,
+ "divergencias_total": 27,
+ "divergencias_pessoa_org": 11
+}
