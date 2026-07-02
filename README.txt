@@ -13,6 +13,13 @@ de dados abertos da Camara dos Deputados, e sao gravados nas saidas em JSON e
 XLSX. Numeros provenientes de outros trabalhos sao apenas citados no artigo e
 nao constam destas saidas.
 
+Duas etapas independentes compoem o pacote:
+  (A) o pipeline de rede (secoes 2-5), que produz cobertura, composicao setorial,
+      centralidade, teste de permutacao, retencao e persistencia;
+  (B) a validacao do classificador setorial (secao 6), que produz o kappa de
+      Cohen entre dois codificadores humanos e a acuracia do classificador por
+      gazetteer contra o consenso humano.
+
 
 --------------------------------------------------------------------------------
 1. REQUISITOS
@@ -44,19 +51,19 @@ Arquivos esperados, um por ano-calendario, no formato JSON de eventos:
     eventos-2024.json
     eventos-2025.json
 
-Os arquivos devem ser colocados em um diretorio (por convencao, "dados/").
-O script le todos os arquivos eventos-*.json desse diretorio, une-os, elimina
-duplicidades por identificador de evento e atribui cada evento ao seu
-ano-calendario pela data de inicio. Os meses de janeiro aparecem vazios em todos
-os anos (recesso parlamentar); a comparabilidade entre anos preserva-se de
-fevereiro a dezembro.
+Sao TRES arquivos anuais. O recorte cobre apenas 2023, 2024 e 2025; nao ha dados
+de 2026. O script le todos os arquivos eventos-*.json do diretorio de dados,
+une-os, elimina duplicidades por identificador de evento e atribui cada evento
+ao seu ano-calendario pela data de inicio (campo dataHoraInicio). Os meses de
+janeiro aparecem vazios em todos os anos (recesso parlamentar); a comparabilidade
+entre anos preserva-se de fevereiro a dezembro.
 
 O download dos arquivos pode ser feito pelo script auxiliar baixar_dados.py.
 O dominio dadosabertos.camara.leg.br precisa estar acessivel na rede.
 
 
 --------------------------------------------------------------------------------
-3. EXECUCAO
+3. EXECUCAO DO PIPELINE DE REDE
 --------------------------------------------------------------------------------
 
 Pipeline principal (metricas por ano, retencao interanual, persistencia):
@@ -69,12 +76,12 @@ O diretorio de saida default e "saida_multiano/" e pode ser alterado pela
 variavel de ambiente SAIDA_DIR.
 
 O componente estocastico (teste de permutacao e teste de robustez a ruido) tem
-semente fixa, de modo que a execucao e deterministica e reproduz os mesmos
+semente fixa (42), de modo que a execucao e deterministica e reproduz os mesmos
 numeros a cada corrida.
 
 
 --------------------------------------------------------------------------------
-4. SAIDAS
+4. SAIDAS DO PIPELINE DE REDE
 --------------------------------------------------------------------------------
 
 resultados_multiano.json
@@ -110,7 +117,60 @@ composicao setorial e diversidade setorial por evento.
 
 
 --------------------------------------------------------------------------------
-5. ARQUIVOS DE CODIGO
+5. VALIDACAO DO CLASSIFICADOR SETORIAL
+--------------------------------------------------------------------------------
+
+A validacao afere a qualidade do classificador setorial por gazetteer contra um
+padrao-ouro humano, por dois indices: (i) confiabilidade interavaliador entre os
+dois codificadores humanos, pelo kappa de Cohen; e (ii) acuracia do classificador
+contra o consenso dos codificadores. A dupla codificacao independente de uma
+amostra de 150 organizacoes foi realizada por dois codificadores (identificados
+nos nomes de arquivo). Esta etapa esta CONCLUIDA.
+
+Entradas:
+
+    codificacao_setorial_fabiano.xlsx   coluna setor_codificador_1 preenchida
+    codificacao_setorial_vanessa.xlsx   coluna setor_codificador_2 preenchida
+    predicoes_classificador.csv         colunas: id, organizacao,
+                                        heuristica_antiga, classificador_novo
+
+    codificacao_setorial_v2.csv         consolidacao das duas codificacoes
+                                        (ambas as colunas num unico arquivo),
+                                        para leitura e adjudicacao; e a planilha
+                                        referida no anexo de validacao do artigo
+
+Execucao:
+
+    python3 compute_kappa_final.py
+
+O script le as duas planilhas dos codificadores, computa o kappa de Cohen e a
+concordancia observada, deriva o consenso (casos em que ambos concordam) como
+padrao-ouro, mede a acuracia do classificador por gazetteer contra esse consenso
+e decompoe os desacertos em abstencoes (Indefinido) e atribuicoes divergentes.
+O intervalo de confianca de 95% do kappa e obtido por bootstrap (10000
+reamostragens, semente fixa 42), de modo deterministico. A saida e impressa e
+gravada em kappa_resultado.json.
+
+Resultados reproduzidos (gravados em kappa_resultado.json):
+
+    n = 150
+    kappa de Cohen = 0,68            (0,6752; IC 95% bootstrap [0,57; 0,78])
+    concordancia observada = 82,0%   (123 de 150)
+    consenso (padrao-ouro) = 123
+    acuracia do gazetteer no consenso = 81,3%   (100 de 123)
+    quando atribui (exclui abstencao) = 93,5%   (100 de 107)
+    desacertos = 23 = 16 abstencoes + 7 atribuicoes divergentes
+    divergencias entre codificadores = 27, das quais 11 do tipo pessoa
+        classificada como organizacao (Indefinido vs Estado)
+
+O numero de 70,0% de concordancia entre a heuristica anterior e o classificador
+por gazetteer, reportado no artigo como medida de consistencia entre os dois
+procedimentos (nao de acuracia), e computado sobre as duas colunas de
+predicoes_classificador.csv (heuristica_antiga vs classificador_novo).
+
+
+--------------------------------------------------------------------------------
+6. ARQUIVOS DE CODIGO
 --------------------------------------------------------------------------------
 
 analise_multiano.py
@@ -124,8 +184,10 @@ extracao_camara.py
     (orientada a marcadores institucionais, com normalizacao leve de grafia) e
     classificacao setorial por gazetteer e entity linking.
 
-compute_kappa.py
-    Confiabilidade interavaliador e validacao do classificador (ver secao 6).
+compute_kappa_final.py
+    Validacao do classificador (secao 5): kappa de Cohen com IC por bootstrap,
+    concordancia observada, acuracia contra o consenso e decomposicao dos
+    desacertos. Grava kappa_resultado.json.
 
 baixar_dados.py
     Download dos arquivos de eventos do Portal de Dados Abertos.
@@ -135,33 +197,7 @@ requirements.txt
 
 
 --------------------------------------------------------------------------------
-6. VALIDACAO DO CLASSIFICADOR SETORIAL (ESTADO)
---------------------------------------------------------------------------------
-
-A validacao do classificador por gazetteer contra padrao-ouro humano, por
-acuracia e por confiabilidade interavaliador (kappa de Cohen), depende da dupla
-codificacao independente de uma amostra de 150 organizacoes, registrada em:
-
-    codificacao_setorial.csv
-
-Essa codificacao e etapa de trabalho humano e esta PENDENTE: as colunas dos dois
-codificadores ainda nao foram preenchidas. Enquanto isso, o artigo mantem, no
-Anexo de validacao, um espaco reservado (marcado em vermelho) com a forma e a
-extensao do resultado final, a ser substituido pelos valores reais apos a
-codificacao.
-
-Para computar os indices apos preencher as duas colunas:
-
-    python3 compute_kappa.py
-
-O mesmo script ja computa, a partir de predicoes_classificador.csv, a
-concordancia entre a heuristica anterior e o classificador por gazetteer
-(70,0% sobre a amostra de 150), reportada no artigo como medida de consistencia
-entre os dois procedimentos, nao de acuracia.
-
-
---------------------------------------------------------------------------------
-7. ESTRUTURA SUGERIDA DO REPOSITORIO
+7. ESTRUTURA DO REPOSITORIO
 --------------------------------------------------------------------------------
 
     pesquisa_quantitativa/
@@ -169,15 +205,17 @@ entre os dois procedimentos, nao de acuracia.
     |- requirements.txt
     |- analise_multiano.py
     |- extracao_camara.py
-    |- compute_kappa.py
+    |- compute_kappa_final.py
     |- baixar_dados.py
-    |- codificacao_setorial.csv          (amostra n=150 para dupla codificacao)
-    |- predicoes_classificador.csv        (predicoes heuristica x gazetteer)
-    |- dados/
-    |   |- eventos-2023.json
-    |   |- eventos-2024.json
-    |   |- eventos-2025.json
-    |- saida_multiano/                    (gerado pela execucao)
+    |- codificacao_setorial_fabiano.xlsx    (codificador 1; n=150)
+    |- codificacao_setorial_vanessa.xlsx    (codificador 2; n=150)
+    |- codificacao_setorial_v2.csv          (consolidacao das duas codificacoes)
+    |- predicoes_classificador.csv          (heuristica x gazetteer, por id)
+    |- kappa_resultado.json                 (saida da validacao)
+    |- eventos-2023.json
+    |- eventos-2024.json
+    |- eventos-2025.json
+    |- saida_multiano/                      (gerado pela execucao do pipeline)
         |- resultados_multiano.json
         |- resultados_multiano.xlsx
 
